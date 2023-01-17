@@ -12,6 +12,7 @@ import { MessagesComponent } from './_components/messages/messages.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './_components/dashboard/dashboard.component';
 import { HeroSearchComponent } from './_components/hero-search/hero-search.component';
+import { PageNotFoundComponent } from './_components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -20,17 +21,14 @@ import { HeroSearchComponent } from './_components/hero-search/hero-search.compo
     HeroDetailComponent,
     MessagesComponent,
     DashboardComponent,
-    HeroSearchComponent
+    HeroSearchComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-
-    // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
-    // and returns simulated server responses.
-    // Remove it when a real server is ready to receive requests.
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     )
